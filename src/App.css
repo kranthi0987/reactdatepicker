@@ -1,38 +1,77 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:focus {
+  outline: 2px solid #d9d7d9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.datepicker {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  cursor: pointer;
+
+}
+.datepicker > div {
+  padding: 10px 20px;
+}
+.datepicker > div:nth-child(1) {
+  background-color: #668fe8;
+  color: #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calendar {
+  width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  background-color: #fffefe;
+  padding: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.iconContainer {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.month {
+  padding: 0 15px;
+}
+
+.header {
+  height: 30px;
+}
+
+.cell {
+  border-radius: 3px;
+  height: 30px;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.cell:hover {
+  background-color: #158cc2;
+  border-color: #b6aeae;
+}
+
+.cell.active {
+  background-color: #158cc2;
+  border-color: #b6aeae;
 }
